@@ -1,4 +1,4 @@
-# Express Convention Router
+# Express Convention-Based Router
 
 This package provides a simple way to define convention-based routes in a Node.js/Express application. I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes (which I've always liked) so I decided to do something similar with `express-convention-router`.
 
