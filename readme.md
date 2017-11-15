@@ -27,7 +27,7 @@ Each folder contains a "controller" file that defines the functionality to run f
 
 To get started perform the following steps:
 
-1. Install the `express-convention-router` package locally (note that the package hasn't been published yet - coming soon!!)
+1. Install the `express-convention-router` package locally (NOTE: The package hasn't been published to npm yet - coming soon!!)
 
     `npm install express-convention-router --save`
 
@@ -70,7 +70,7 @@ folder structure in the "controllers" folder when the Express server starts:
 
     ```JavaScript
 
-    const router = require('express-convention-router');
+    var router = require('express-convention-router');
 
     ...
 
