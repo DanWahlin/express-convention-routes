@@ -1,0 +1,22 @@
+{
+  "name": "express-convention-router",
+  "version": "1.0.0",
+  "description": "Convention-based router for Express",
+  "keywords": [
+    "express",
+    "convention",
+    "routing"
+  ],
+  "author": "Dan Wahlin",
+  "license": "MIT",
+  "repository": "git://github.com/danwahlin/express-convention-router.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "node examples/server.js"
+  },
+  "devDependencies": {
+    "express": "~4.16.2",
+    "hbs": "~4.0.1",
+    "nodemon": "^1.12.1"
+  }
+}
