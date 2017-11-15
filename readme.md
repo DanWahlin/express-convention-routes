@@ -1,9 +1,8 @@
 # Express Convention Router
 
-This module provides a simple way to define convention-based routes in a Node.js application. I originally got the idea from how ASP.NET MVC (as well as other MVC frameworks)and KrakenJS
-s  (http://krakenjs.com) routes work. These frameworks automate the process of creating routes (which I've always liked) so I decided to do something similar with `express-convention-router`.
+This package provides a simple way to define convention-based routes in a Node.js/Express application. I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes (which I've always liked) so I decided to do something similar with `express-convention-router`.
 
-`express-convention-router` creates routes automatically by parsing a folder structure such as the one below. This allows you to easily create new routes without having to write any code to define the individual routes.
+`express-convention-router` creates routes automatically by parsing a convention-based folder structure such as the one below. 
 
 ```
 -controllers
@@ -15,7 +14,7 @@ s  (http://krakenjs.com) routes work. These frameworks automate the process of c
     -index.controller.js
 ```
 
-The previous folder structure would cause `express-convention-router` to create following routes:
+This allows application routes to be created without having to write any code to define the individual routes. The previous folder structure would cause `express-convention-router` to create following routes:
 
 ```
 /customers
@@ -23,7 +22,7 @@ The previous folder structure would cause `express-convention-router` to create 
 /
 ```
 
-Each folder contains a "controller" file that defines the functionality to run for the given route. For example, if you want a root route you'd add a file into the root `controllers` folder (`index.controller.js` for example). If you want an `api/cart` route you'd create that folder structure under the `controllers` folder (see the folder example above) and add a "controller" file such as `cart.controller.js` into the `api/cart` folder.
+Each folder contains a "controller" file that defines the functionality to run for the given route. For example, if you want a root route you'd add a file into the root `controllers` folder (`index.controller.js` for example). If you want an `api/cart` route you'd create that folder structure under the `controllers` folder (see the folder example above) and add a "controller" file such as `cart.controller.js` into the `api/cart` folder. You can name the `controller` files anything you'd like.
 
 To get started perform the following steps:
 
