@@ -27,7 +27,7 @@ Each folder contains a "controller" file that defines the functionality to run f
 
 To get started perform the following steps:
 
-1. Install the `express-convention-router` package locally:
+1. Install the `express-convention-router` package locally (note that the package hasn't been published yet - coming soon!!)
 
     `npm install express-convention-router --save`
 
@@ -86,13 +86,15 @@ folder structure in the "controllers" folder when the Express server starts:
     ```JavaScript
 
     router.load(app, {
-    //Defaults to "./controllers" but showing for example
-    routesDirectory: './controllers', 
-    //Do you want the created routes to be shown in the console?
-    logRoutes: true, 
-    //Defined since "controllers" isn't at the root of the project
-    //and is in "examples" for this particular example
-    rootDirectory: './examples/' 
+        //Defaults to "./controllers" but showing for example
+        routesDirectory: './controllers', 
+
+        //Defined since "controllers" isn't at the root of the project
+        //and is in "examples" for this particular example
+        rootDirectory: './examples/',
+        
+        //Do you want the created routes to be shown in the console?
+        logRoutes: true, 
     });
 
     ```
