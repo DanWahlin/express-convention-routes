@@ -92,9 +92,9 @@ folder structure in the "controllers" folder when the Express server starts:
         //Defined since "controllers" isn't at the root of the project
         //and is in "examples" for this particular example
         rootDirectory: './examples/',
-        
+
         //Do you want the created routes to be shown in the console?
-        logRoutes: true, 
+        logRoutes: true 
     });
 
     ```
