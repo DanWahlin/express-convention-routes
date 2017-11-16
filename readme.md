@@ -98,4 +98,4 @@ To get started perform the following steps:
 * `npm install`
 * `npm start`
 
-Note: I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes so I wanted to do something similar with `express-convention-router`.
+I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes so I wanted to do something similar with `express-convention-router`.
