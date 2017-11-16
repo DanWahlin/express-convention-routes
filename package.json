@@ -5,6 +5,7 @@
   "keywords": [
     "express",
     "convention",
+    "router",
     "routing"
   ],
   "author": "Dan Wahlin",
@@ -16,7 +17,6 @@
   },
   "devDependencies": {
     "express": "~4.16.2",
-    "hbs": "~4.0.1",
-    "nodemon": "^1.12.1"
+    "hbs": "~4.0.1"
   }
 }
