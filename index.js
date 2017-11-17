@@ -31,7 +31,7 @@ var router = function () {
                     //Recursively walk-through folders
                     parseDirectories(fullName);
                 }
-                else if (file.toLowerCase().indexOf('.js')) {
+                else if (path.extname(file) === '.js') {
                     //Found .js controller file so create route
                     createRoute(fullName);
                 }
