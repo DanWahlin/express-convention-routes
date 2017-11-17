@@ -61,8 +61,10 @@ To get started perform the following steps:
 1. Once the routing folder structure is created, add the following code into your express server code (index.js, server.js, etc.) to load the routes automatically based on the folder structure in the "controllers" folder when the Express server starts:
 
     ```JavaScript
+    var express = require('express');
+    var app = express();
     var router = require('express-convention-routes');
-    
+
     router.load(app, {
         //Defaults to "./controllers" but showing for example
         routesDirectory: './controllers', 
