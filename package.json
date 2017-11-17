@@ -1,6 +1,6 @@
 {
   "name": "express-convention-routes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convention-based routing for Express",
   "keywords": [
     "express",

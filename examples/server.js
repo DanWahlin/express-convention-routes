@@ -10,7 +10,7 @@ process.chdir('./examples');
 //Automatically register routes/controllers using express-convention-routes
 router.load(app, {
   //Defaults to "./controllers" but showing for example
-  //routesDirectory: './controllers', 
+  routesDirectory: './controllers', 
 
   //Define root directory for server ("examples" folder is added in this case)
   rootDirectory: __dirname,
