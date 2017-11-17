@@ -7,14 +7,13 @@ var express = require('express');
 //Change working directory since we're working in the "examples" subfolder
 process.chdir('./examples');
 
-//Automatically register routes/controllers using express-convention-router
+//Automatically register routes/controllers using express-convention-routes
 router.load(app, {
   //Defaults to "./controllers" but showing for example
-  routesDirectory: './controllers', 
+  //routesDirectory: './controllers', 
 
-  //Defined since "controllers" isn't at the root of the project
-  //and is in "examples" for this particular example
-  rootDirectory: './examples/',
+  //Define root directory for server ("examples" folder is added in this case)
+  rootDirectory: __dirname,
   
   //Do you want the created routes to be shown in the console?
   logRoutes: true

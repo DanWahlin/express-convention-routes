@@ -62,33 +62,15 @@ To get started perform the following steps:
 
     ```JavaScript
 
-    var router = require('express-convention-routes');
-
-    ...
-    //Defaults to using the "controllers" folder to look for routes
-    //that should be created. See below for overriding settings.
-    router.load(app);
-
-    ```
-
-    The `app` object represents the Express instance.
-
-    If you want to define the folder where your routes are, log created routes to the console, and even change the root folder where the routes folder lives you can do the following:
-
-    ```JavaScript
-
     router.load(app, {
         //Defaults to "./controllers" but showing for example
         routesDirectory: './controllers', 
 
-        //Defined if routesDirectory isn't at the root of the project
-        //"examples" is the root directory for this particular example
-        //Can normally leave this out if your routesDirectory is off 
-        //the root of the project
-        rootDirectory: './examples/',
-
+        //Root directory where your server is running
+        rootDirectory: __dirname,
+        
         //Do you want the created routes to be shown in the console?
-        logRoutes: true 
+        logRoutes: true
     });
 
     ```

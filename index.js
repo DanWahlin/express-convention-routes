@@ -8,7 +8,7 @@ var router = function () {
 
     var defaultSettings = {
             routesDirectory: './controllers',
-            rootDirectory: './',
+            rootDirectory: '',
             logRoutes: false,
         },
         settings = null,
@@ -16,8 +16,11 @@ var router = function () {
 
         //Called only once during initial server startup
         load = function (app, routerSettings) {
-            expressApp = app;
             settings = Object.assign(defaultSettings, routerSettings);
+            if (!settings.rootDirectory) {
+                throw new Error('rootDirectory of your server must be provided (__dirname can normally be used)');
+            }
+            expressApp = app;
             parseDirectories(settings.routesDirectory);
             return;
         },
@@ -54,7 +57,7 @@ var router = function () {
             var routePath = '/' + dirs.join('/');
 
             //Load the JavaScript "controller" file and pass the router to it
-            require(settings.rootDirectory + fullName)(router);
+            require(path.join(settings.rootDirectory, fullName))(router);
             //Associate the route with the router
             expressApp.use(routePath, router);
 
