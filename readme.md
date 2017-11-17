@@ -1,8 +1,8 @@
-# Express Convention-Based Router
+# Express Convention-Based Routes
 
 This package provides a simple way to define convention-based routes in a Node.js/Express application that are created based on a directory structure. 
 
-What's a convention-based Express route? It's a route that is dynamically generated and associated with a "controller" function without having to explicitly code the route yourself (i.e. you don't write code such as app.use('/foo', router)). `express-convention-router` creates routes automatically by parsing a convention-based folder structure such as the one below when the server first starts.
+What's a convention-based Express route? It's a route that is dynamically generated and associated with a "controller" function without having to explicitly code the route yourself (i.e. you don't write code such as app.use('/foo', router)). `express-convention-routes` creates routes automatically by parsing a convention-based folder structure such as the one below when the server first starts.
 
 ```
 -controllers
@@ -14,7 +14,7 @@ What's a convention-based Express route? It's a route that is dynamically genera
     -index.controller.js
 ```
 
-This allows application routes to be created without having to write any app.use() code to define the individual routes. Using the previous folder structure, `express-convention-router` would create the following routes (and associate them
+This allows application routes to be created without having to write any app.use() code to define the individual routes. Using the previous folder structure, `express-convention-routes` would create the following routes (and associate them
 with the appropriate "controller" functions):
 
 ```
@@ -27,9 +27,9 @@ Each folder contains a "controller" file that defines the functionality to run f
 
 To get started perform the following steps:
 
-1. Install the `express-convention-router` package locally (NOTE: The package hasn't been published to npm yet - coming soon!!)
+1. Install the `express-convention-routes` package locally:
 
-    `npm install express-convention-router --save`
+    `npm install express-convention-routes --save`
 
 1. Create a `controllers` folder at the root of your Express project.
 
@@ -62,7 +62,7 @@ To get started perform the following steps:
 
     ```JavaScript
 
-    var router = require('express-convention-router');
+    var router = require('express-convention-routes');
 
     ...
     //Defaults to using the "controllers" folder to look for routes
@@ -98,4 +98,4 @@ To get started perform the following steps:
 * `npm install`
 * `npm start`
 
-I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes so I wanted to do something similar with `express-convention-router`.
+I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes so I wanted to do something similar with `express-convention-routes`.

@@ -7,12 +7,6 @@ var express = require('express');
 //Change working directory since we're working in the "examples" subfolder
 process.chdir('./examples');
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-
-app.use(express.static(path.join(__dirname, 'public')));
-
 //Automatically register routes/controllers using express-convention-router
 router.load(app, {
   //Defaults to "./controllers" but showing for example
