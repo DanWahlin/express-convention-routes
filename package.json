@@ -10,7 +10,7 @@
   ],
   "author": "Dan Wahlin",
   "license": "MIT",
-  "repository": "git://github.com/danwahlin/express-convention-router.git",
+  "repository": "git://github.com/danwahlin/express-convention-routes.git",
   "main": "index.js",
   "scripts": {
     "start": "node examples/server.js"
