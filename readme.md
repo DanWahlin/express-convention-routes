@@ -80,7 +80,9 @@ To get started perform the following steps:
 
 
 1. Try out the included sample app by running the following commands:
-* `npm install`
-* `npm start`
+    * `npm install`
+    * `npm start`
+
+1. The sample follows a feature-based approach where the controller and associated view are in the same folder (handlebars is used for the views in the sample). If you prefer the more traditional approach where all of the views live in the "views" folder you can simply move the .hbs files there into the proper folders.
 
 I originally got the idea from ASP.NET MVC (as well as other MVC frameworks)and KrakenJS (http://krakenjs.com). These frameworks automate the process of creating routes so I wanted to do something similar with `express-convention-routes`.
