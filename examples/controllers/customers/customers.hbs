@@ -1,0 +1,11 @@
+{{#unless posted}}
+    <h1>Hello from the /customers route</h1>
+    <br />
+    <form method="post" action="/customers">
+        <input type="submit" value="Post Customer" />
+    </form>
+{{/unless}}
+
+{{#if posted}}
+   <h1>Data posted to the /customers route</h1>
+{{/if}}

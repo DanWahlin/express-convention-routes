@@ -10,8 +10,8 @@ module.exports = function (router) {
     });
 
     router.post('/', function (req, res) {
-        res.end(`
-            <h1>Post data received on /api/cart route!</h1>
-        `);
+        res.json(
+            { message: 'Post data received on /api/cart route!' }
+        );
     });
 };
