@@ -4,21 +4,21 @@ var express = require('express');
     app = express(),
     port = 3000;
 
-//Change working directory since we're working in the "examples" subfolder
+// Change working directory since we're working in the "examples" subfolder
 process.chdir('./examples');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-//Automatically register routes/controllers using express-convention-routes
+// Automatically register routes/controllers using express-convention-routes
 router.load(app, {
-  //Defaults to "./controllers" but showing for example
+  // Defaults to "./controllers" but showing for example
   routesDirectory: './controllers', 
 
-  //Define root directory for server ("examples" folder is added in this case)
+  // Define root directory for server ("examples" folder is added in this case)
   rootDirectory: __dirname,
   
-  //Do you want the created routes to be shown in the console?
+  // Do you want the created routes to be shown in the console?
   logRoutes: true
 });
 

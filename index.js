@@ -9,7 +9,7 @@ var router = function () {
     var defaultSettings = {
             routesDirectory: './controllers',
             rootDirectory: '',
-            logRoutes: false,
+            logRoutes: false
         },
         settings = null,
         expressApp = null,
@@ -57,7 +57,15 @@ var router = function () {
             var routePath = '/' + dirs.join('/');
 
             //Load the JavaScript "controller" file and pass the router to it
-            require(path.join(settings.rootDirectory, fullName))(router);
+            const controller = require(path.join(settings.rootDirectory, fullName));
+            
+            if (isClass(controller)) {
+               new controller(router);
+            }
+            else {
+                controller(router);
+            }
+
             //Associate the route with the router
             expressApp.use(routePath, router);
 
@@ -65,6 +73,18 @@ var router = function () {
             if (settings.logRoutes) {
                 console.log('Created route: ' + routePath + ' for ' + fullName);
             }
+        },
+
+        // The following is the fastest but could pose a problem if an arrow function is used.
+        // Speed isn't an issue with this scenario anyway since this is only called when the server initially fires up.
+        // https://stackoverflow.com/questions/29093396/how-do-you-check-the-difference-between-an-ecmascript-6-class-and-function
+        // isClass = function(func) {
+        //     return typeof func === 'function' && func.hasOwnProperty('prototype') && !func.hasOwnProperty('arguments');
+        // };
+
+        isClass = function(func) {
+            return typeof func === 'function' 
+              && /^class\s/.test(Function.prototype.toString.call(func));
         };
 
     return {
