@@ -44,6 +44,22 @@ To get started perform the following steps:
     };
     ```
 
+    Note that if you'd like to use a controller class you can do that as well:
+
+    ```JavaScript
+    class IndexController {
+
+        constructor(router) {
+            router.get('/', this.get.bind(this));
+        }
+
+        get(req, res) {
+            res.render(__dirname + '/index');
+        }
+    }
+    module.exports = IndexController;
+    ```
+
 1. To create a `/customers` route, create a subfolder under `controllers` named `customers`.
 
 1. Add a `customers.controller.js` file into the `customers` folder (you can name the file anything you'd like):
