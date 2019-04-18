@@ -1,30 +1,5 @@
 # Express Convention-Based Routes
 
-This package make changes to the original version of "Express Convention-Based Routes" by allowing the control of the root Url of the controller, and in this way, you can enable partial convention routes like "api/post" while let other parts of routing system independent of the convention routes.
-
-    ```JavaScript
-    var express = require('express');
-    var app = express();
-    var router = require('express-convention-routes');
-
-    router.load(app, {
-        //Defaults to "./controllers" but showing for example
-        routesDirectory: './controllers', 
-
-        //Root directory where your server is running
-        rootDirectory: __dirname,
-        
-        //Root url for partial convention Routes
-        rootUrl:'/api/',
-        
-        //Do you want the created routes to be shown in the console?
-        logRoutes: true
-    });
-
-
-# The orignal description
----------------------
-
 This package provides a simple way to define convention-based routes in a Node.js/Express application that are created based on a directory structure. 
 
 What's a convention-based Express route? It's a route that is dynamically generated and associated with a "controller" function without having to explicitly code the route yourself (i.e. you don't write code such as app.use('/foo', router)). `express-convention-routes` creates routes automatically by parsing a convention-based folder structure such as the one below when the server first starts. 
@@ -112,6 +87,10 @@ To get started perform the following steps:
 
         //Root directory where your server is running
         rootDirectory: __dirname,
+        
+        
+        //Root url of partial convention routes ('/api/ for instance')
+        rootDirectory: '/',
         
         //Do you want the created routes to be shown in the console?
         logRoutes: true
