@@ -9,7 +9,8 @@ var router = function () {
     var defaultSettings = {
             routesDirectory: './controllers',
             rootDirectory: '',
-            logRoutes: false
+            rootUrl:'/',
+            logRoutes: false,
         },
         settings = null,
         expressApp = null,
@@ -54,7 +55,7 @@ var router = function () {
 
             //Generate the route
             var router = express.Router();
-            var routePath = '/' + dirs.join('/');
+            var routePath = settings.rootUrl + dirs.join('/');
 
             //Load the JavaScript "controller" file and pass the router to it
             const controller = require(path.join(settings.rootDirectory, fullName));

@@ -88,6 +88,10 @@ To get started perform the following steps:
         //Root directory where your server is running
         rootDirectory: __dirname,
         
+        
+        //Root url of partial convention routes ('/api/ for instance')
+        rootDirectory: '/',
+        
         //Do you want the created routes to be shown in the console?
         logRoutes: true
     });
