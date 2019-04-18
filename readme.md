@@ -2,7 +2,11 @@
 
 This package make changes to the original version of "Express Convention-Based Routes" by allowing the control of the root Url of the controller, and in this way, you can enable partial convention routes like "api/post" while let other parts of routing system independent of the convention routes.
 
-////////
+
+
+
+# The orignal description
+---------------------
 
 This package provides a simple way to define convention-based routes in a Node.js/Express application that are created based on a directory structure. 
 
