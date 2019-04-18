@@ -1,8 +1,8 @@
 'use strict';
 
-var fs = require('fs'),
-    path = require('path'),
-    express = require('express');
+var fs =        require('fs'),
+    path =      require('path'),
+    express =   require('express');
 
 var router = function () {
 

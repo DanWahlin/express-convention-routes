@@ -29,7 +29,7 @@ To get started perform the following steps:
 
 1. Install the `express-convention-routes` package locally:
 
-    `npm install express-convention-routes --save`
+    `npm install express-convention-routes`
 
 1. Create a `controllers` folder at the root of your Express project.
 
@@ -82,17 +82,18 @@ To get started perform the following steps:
     var router = require('express-convention-routes');
 
     router.load(app, {
-        //Defaults to "./controllers" but showing for example
+        // Defaults to "./controllers" but showing for example
         routesDirectory: './controllers', 
 
-        //Root directory where your server is running
+        // Root directory where your server is running
         rootDirectory: __dirname,
         
         
         //Root url of partial convention routes ('/api/ for instance')
+        // Defaults to '/'
         rootDirectory: '/',
         
-        //Do you want the created routes to be shown in the console?
+        // Do you want the created routes to be shown in the console?
         logRoutes: true
     });
 

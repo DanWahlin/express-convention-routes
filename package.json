@@ -1,6 +1,6 @@
 {
   "name": "express-convention-routes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Convention-based routing for Express",
   "keywords": [
     "express",
@@ -16,7 +16,7 @@
     "start": "node examples/server.js"
   },
   "devDependencies": {
-    "express": "~4.16.2",
-    "hbs": "~4.0.1"
+    "express": "~4.16.4",
+    "hbs": "~4.0.4"
   }
 }
