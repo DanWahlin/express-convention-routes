@@ -2,7 +2,24 @@
 
 This package make changes to the original version of "Express Convention-Based Routes" by allowing the control of the root Url of the controller, and in this way, you can enable partial convention routes like "api/post" while let other parts of routing system independent of the convention routes.
 
+    ```JavaScript
+    var express = require('express');
+    var app = express();
+    var router = require('express-convention-routes');
 
+    router.load(app, {
+        //Defaults to "./controllers" but showing for example
+        routesDirectory: './controllers', 
+
+        //Root directory where your server is running
+        rootDirectory: __dirname,
+        
+        //Root url for partial convention Routes
+        rootUrl:'/api/',
+        
+        //Do you want the created routes to be shown in the console?
+        logRoutes: true
+    });
 
 
 # The orignal description
